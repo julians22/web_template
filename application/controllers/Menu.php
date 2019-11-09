@@ -31,8 +31,7 @@ class Menu extends CI_Controller
             $this->load->view('templates/user_footer');
         } else {
             $this->db->insert('user_menu', ['menu' => $this->input->post('menu')]);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            Success Added</div>');
+            $this->session->set_flashdata('message', '<div class="flash-data" data-flashdata="Added"></div>');
             redirect('menu');
         }
     }

@@ -20,8 +20,7 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -47,16 +46,18 @@
 
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
+<script src="<?= base_url('assets/'); ?>vendor/swall/sweetalert2.all.min.js"></script>
 
 <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <!-- Page level custom scripts -->
 <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+<script src="<?= base_url('assets/'); ?>js/myscript.js"></script>
 
 <script>
-$(document).ready( function () {
-    $('#tableLay').DataTable();
-} );
+    $(document).ready(function() {
+        $('#tableLay').DataTable();
+    });
 </script>
 
 <!-- Ajaxing -->
@@ -67,7 +68,7 @@ $(document).ready( function () {
     });
 
 
-    $('.form-check-input').on('click', function(){
+    $('.form-check-input').on('click', function() {
         const menuId = $(this).data('menu');
         const roleId = $(this).data('role');
 
@@ -78,7 +79,7 @@ $(document).ready( function () {
                 menuId: menuId,
                 roleId: roleId
             },
-            success: function(){
+            success: function() {
                 document.location.href = "<?= base_url('admin/roleaccess/'); ?>" + roleId;
             }
         });

@@ -9,15 +9,16 @@
 
                     <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
                     <?= $this->session->flashdata('message'); ?>
+                    <div class="flash-data bounce" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
                     <?php if($this->session->flashdata('flash')) : ?>
-                    <div class="col-md-6 mt-2">
+                    <!-- <div class="col-md-6 mt-2">
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             Menu Data <strong>Success</strong> <?= $this->session->flashdata('flash'); ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                     <?php endif; ?>
 
                     <div class="card shadow-lg mt-3">
@@ -43,7 +44,7 @@
                                         <td>
                                             <a href="<?= base_url('menu/editmenu/')  .  $m['id'];?>" class="badge badge-info">Edit</a>
                                             <a href="<?= base_url('menu/deletemenu/')  .  $m['id'];?>"
-                                                class="badge badge-danger">Delete</a>
+                                                class="badge badge-danger hapus">Delete</a>
                                         </td>
                                     </tr>
                                     <?php $i++; ?>
