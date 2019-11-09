@@ -64,8 +64,7 @@ class Menu extends CI_Controller
                 'is_active' => $this->input->post('is_active')
             ];
             $this->db->insert('user_sub_menu', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            Success Added</div>');
+            $this->session->set_flashdata('message', '<div class="flash-data" data-flashdata="Added"></div>');
             redirect('menu/submenu');
         }
     }

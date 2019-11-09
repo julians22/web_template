@@ -1,7 +1,8 @@
 const flashdata = $('.flash-data').data('flashdata');
+const title = document.getElementById("title").innerText;
 if (flashdata) {
     Swal.fire({
-			title: "Menu Data",
+			title: title + " Data",
 			text: "Success " + flashdata,
 			type: "success",
 			animation: false,
