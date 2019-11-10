@@ -178,7 +178,7 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('role_id');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-        You Has Been Slayed! </div>');
+        Your Session Has been Ended </div>');
         redirect('auth');
     }
     public function blocked()
