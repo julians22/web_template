@@ -59,7 +59,7 @@
 
         <?php endforeach; ?>
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+            <a class="nav-link" href="<?= base_url('auth/logout'); ?>" id="logoutBtn">
                 <i class="fas fa-fw fa-sign-out-alt"></i>
                 <span>Logout</span></a>
         </li>
