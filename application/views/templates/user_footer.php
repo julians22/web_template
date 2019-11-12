@@ -20,7 +20,7 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
 <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -58,6 +58,24 @@
 <script>
     $(document).ready(function() {
         $('#tableLay').DataTable();
+    });
+
+    $(".logout").on("click", function(e) {
+        e.preventDefault();
+        const href = $(this).attr("href");
+        Swal.fire({
+            title: "Are you sure?",
+            text: "This action will end Your Session!",
+            type: "danger",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Logout!"
+        }).then(result => {
+            if (result.value) {
+                document.location.href = href;
+            }
+        });
     });
 </script>
 
