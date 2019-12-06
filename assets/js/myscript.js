@@ -1,8 +1,9 @@
 const flashdata = $('.flash-data').data('flashdata');
 const title = document.getElementById("title").innerText;
 if (flashdata) {
-    Swal.fire({
-			title: title + " Data",
+	if (title=='Password') {
+		Swal.fire({
+			title: "Password",
 			text: "Success " + flashdata,
 			type: "success",
 			animation: false,
@@ -10,6 +11,17 @@ if (flashdata) {
 				popup: "animated jackInTheBox"
 			}
 		});
+	}else{
+		Swal.fire({
+				title: title + " Data",
+				text: "Success " + flashdata,
+				type: "success",
+				animation: false,
+				customClass: {
+					popup: "animated jackInTheBox"
+				}
+			});
+	}
 }
 
 // alert hapus
